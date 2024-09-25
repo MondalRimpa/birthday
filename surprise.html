@@ -26,7 +26,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             cursor: pointer;
-            display: none; /* Initially hide the video */
+            display: none; /* Initially hide the videos */
         }
 
         /* Input Styles */
@@ -87,18 +87,18 @@
     </div>
 
     <!-- Surprise Video Section -->
-    <video id="surpriseVideo" controls>
-        <source src="videos/video1.mp4" type="video/mp4">
+    <video id="video1" controls>
+        <source src="wish/video1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <video id="surpriseVideo" controls>
-        <source src="videos/video2.mp4" type="video/mp4">
+    <video id="video2" controls>
+        <source src="wish/video2.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <video id="surpriseVideo" controls>
-        <source src="videos/video3.mp4" type="video/mp4">
+    <video id="video3" controls>
+        <source src="wish/video3.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
@@ -106,9 +106,13 @@
         function checkPassword() {
             const enteredPassword = document.getElementById('passwordInput').value;
             const correctPassword = '2021'; // Set your password here
-            
+
             if (enteredPassword === correctPassword) {
-                document.getElementById('surpriseVideo').style.display = 'block'; // Show the video
+                // Show all videos
+                document.getElementById('video1').style.display = 'block';
+                document.getElementById('video2').style.display = 'block';
+                document.getElementById('video3').style.display = 'block';
+
                 document.querySelector('.password-form').style.display = 'none'; // Hide the form
             } else {
                 alert('Incorrect password. Please try again.');
